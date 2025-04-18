@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Zaqi Outdoor E-commerce Terbaik</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            color: #212b36;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #002e25;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .cta-button {
+            background-color: #008060;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #006e52;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: #004c3f;
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .trial-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .trial-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+        
+        .trial-form button {
+            background-color: #008060;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 0 4px 4px 0;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            padding: 20px;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+        
+        .feature-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #f4f6f8;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-subtitle {
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-plan {
+            background-color: white;
+            border: 1px solid #e1e3e5;
+            border-radius: 8px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .pricing-plan:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-plan h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .price span {
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        .features-list {
+            margin: 25px 0;
+            list-style: none;
+        }
+        
+        .features-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            color: #008060;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background-color: #004c3f;
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #002e25;
+            color: white;
+            padding: 60px 40px 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #b6babf;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            nav {
+                margin-top: 20px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .trial-form {
+                flex-direction: column;
+            }
+            
+            .trial-form input, .trial-form button {
+                width: 100%;
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Zaqi Outdoor</div>
+        <nav>
+            <ul>
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#pricing">Harga</a></li>
+                <li><a href="#" class="cta-button">Mulai Belanja</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Buat akun</h1>
+        <p>Platform e-commerce terbaik.</p>
+        <div class="trial-form">
+            <input type="email" placeholder="Masukkan alamat email Anda">
+            <button>Mulai login</button>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Semua yang Anda Butuhkan untuk Sukses Online</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <img src="image/carrier osprey.jpg.jpeg" .jpeg"width="200px"height="200px">
+                <h3>Carrier Ospey</h3>
+                <p>Osprey backpack with extra rain cover backpack
+                    data: Dimensions: width approx. 35 cm, height approx. 70 cm, depth approx. 24 cm.</p>
+            </div>
+            <div class="feature-item">
+                <img src="image/tenda.jpg_.webp".jpeg"width="200px"height="200px">
+                <h3>Tenda The North Face</h3>
+                <p>Stormbreak 2 adalah tenda berkemah dua orang klasik kami dengan ruang kepala yang luas.</p>
+            </div>
+            <div class="feature-item">
+                <img src="image/salomon.jpg" .jpeg"width="200px"height="200px">
+                <h3>Salomon</h3>
+                <p>Salomon XT-6 Gore-Tex Black Lime Cream – Kombinasi Teknologi Trail Running dan Streetwear Modern
+                    Salomon XT-6 Gore-Tex Black Lime Cream adalah definisi sepatu high-performance yang merambah dunia fashion tanpa kehilangan identitas aslinya. Awalnya diciptakan untuk trail running ekstrem.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>Dipercaya oleh Ribuan manusia</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <p class="testimonial-text">"ZaqiStore telah mengubah bisnis saya. Dalam 1 Detik, penjualan online saya meningkat 200% berkat fitur-fitur dan dukungan luar biasa mereka."</p>
+                <div class="testimonial-author">
+                    <img src="/api/placeholder/50/50" alt="Author" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Zaqi Rayhan Alfiansyah</h4>
+                        <p>Founder</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <p class="testimonial-text">"Antarmuka yang intuitif dan kemudahan penggunaan platform ini membuat saya bisa fokus pada produk dan pelanggan, bukan teknologi."</p>
+                <div class="testimonial-author">
+                    <img src="image/CEO.jpg" alt="Author" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Ayah Tony</h4>
+                        <p>CEO, Ahli Bengkel Urusan 5 Menit</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <p class="testimonial-text">"Fitur SEO dan integrasi marketing membantu toko online saya tampil di halaman pertama Google. ROI dari investasi ke ZaqiStore sungguh luar biasa."</p>
+                <div class="testimonial-author">
+                    <img src="image/FOUNDER.jpg" alt="Author" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Piyan PCX</h4>
+                        <p>Founder, Shopee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <h2>Pilih Paket yang Tepat untuk Anda</h2>
+        <p class="pricing-subtitle">Kami menawarkan beberapa paket untuk memenuhi kebutuhan anda .</p>
+        <div class="pricing-grid">
+            <div class="pricing-plan">
+                <h3>Carrier Osprey</h3>
+                <div class="price">Rp 2.000.000<span></span></div>
+                <p>Sempurna untuk pemula yang baru memulai pendakian.</p>
+                <ul class="features-list">
+                    <li>Toko online dasar</li>
+                    <li>Pembayaran online</li>
+                    <li>Dukungan 24/7</li>
+                </ul>
+                <a href="#" class="cta-button">Pilih Paket</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>Tenda The North Face</h3>
+                <div class="price">Rp 10.000.000<span></div>
+                <p>Tempat berlindung dalam kondisi cuaca yang ekstrem.</p>
+                <ul class="features-list">
+                    <li>Semua fitur gokil</li>
+                    <li>Laporan profesional</li>
+                    <li>Kartu hadiah Member ZaqiShop</li>
+                    <li>Tarif pengiriman terhitung otomatis</li>
+                </ul>
+                <a href="#" class="cta-button">Pilih Paket</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>Sepatu Salomon</h3>
+                <div class="price">Rp 6.000.000<span></span></div>
+                <p>Fitur terbaik untuk lari diatas batu.</p>
+                <ul class="features-list">
+                    <li>Semua fitur nyaman</li>
+                    <li>Tarif pengiriman khusus</li>
+                    <li>Laporan analisis lanjutan</li>
+                </ul>
+                <a href="#" class="cta-button">Pilih Paket</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Mulai E-commerce Anda Hari Ini</h2>
+        <p>Aturan tiga adalah pedoman bertahan hidup yang membantu Anda mengingat prioritas dalam keadaan darurat. Dinyatakan bahwa Anda dapat bertahan hidup ZaqiStore.</p>
+        <a href="#" class="cta-button">AYO SEGERA BELANJA</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Fitur</a></li>
+                    <li><a href="#">Keamanan</a></li>
+                    <li><a href="#">Integrasi</a></li>
+                    <li><a href="#">Partner Program</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Perusahaan</h4>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Sumber Daya</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Panduan</a></li>
+                    <li><a href="#">Webinar</a></li>
+                    <li><a href="#">Studi Kasus</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">Status Sistem</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Forum Komunitas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#">FB</a>
+                <a href="#">TW</a>
+                <a href="#">IG</a>
+                <a href="#">LI</a>
+                <a href="#">YT</a>
+            </div>
+            <p>&copy; 2025 ZaqiStore Inc. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
